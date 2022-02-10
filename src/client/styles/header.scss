@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  justify-content: left;
+  padding: 10px 40px;
+
+  .title {
+    text-transform: bold;
+    font-size: 38px;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>NLP Evaluator</title>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                NLP Evaluator
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Text or URL">
+                    <input class="btn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+
+                </form>
+            </section>
+
+            <section class="form-result">
+               <h2><strong >Text analysis results</strong></h2>
+                <div class="results" id="results">
+                    <div id="agreement"><span class="result" ></span></div>
+                    <div  id="subjectivity"><span class="result" ></span></div>
+                    <div id="irony"><span class="result" ></span></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <nav >
+             <div class="copyright">I made this in 2022</div>
+            </nav>    
+        </footer>
+
+        <script>
+            // service workers have to be present
+            if ('serviceWorker' in navigator) {
+                // add listener to 'load' event
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+    </body>
+</html>
